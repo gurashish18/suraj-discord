@@ -5,6 +5,7 @@ import Articles from "../sections/Articles";
 import Interest from "../sections/Interest";
 import Me from "../sections/Me";
 import MyStory from "../sections/MyStory";
+import NewsLetter from "../sections/NewsLetter";
 import Social from "../sections/Social";
 import Youtube from "../sections/Youtube";
 
@@ -17,6 +18,7 @@ const Main = () => {
 			<Youtube />
 			<Social />
 			<Articles />
+			<NewsLetter />
 		</>
 	);
 };
