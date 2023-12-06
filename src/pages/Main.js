@@ -1,6 +1,7 @@
 /** @format */
 
 import React from "react";
+import Articles from "../sections/Articles";
 import Interest from "../sections/Interest";
 import Me from "../sections/Me";
 import MyStory from "../sections/MyStory";
@@ -15,6 +16,7 @@ const Main = () => {
 			<Interest />
 			<Youtube />
 			<Social />
+			<Articles />
 		</>
 	);
 };
