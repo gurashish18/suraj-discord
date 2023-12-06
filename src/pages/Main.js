@@ -4,6 +4,7 @@ import React from "react";
 import Interest from "../sections/Interest";
 import Me from "../sections/Me";
 import MyStory from "../sections/MyStory";
+import Youtube from "../sections/Youtube";
 
 const Main = () => {
 	return (
@@ -11,6 +12,7 @@ const Main = () => {
 			<Me />
 			<MyStory />
 			<Interest />
+			<Youtube />
 		</>
 	);
 };
