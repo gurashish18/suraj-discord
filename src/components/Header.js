@@ -18,6 +18,7 @@ const Header = () => {
 					fontWeight: 600,
 					fontSize: "36px",
 					color: "#ffffff",
+					lineHeight: "45.54px",
 				}}
 			>
 				Suraj Van Verma
@@ -29,6 +30,7 @@ const Header = () => {
 							color: "#ffffff",
 							fontWeight: 500,
 							fontSize: "30px",
+							lineHeight: "37.59px",
 						}}
 					>
 						Me
@@ -40,6 +42,7 @@ const Header = () => {
 							color: "#ffffff",
 							fontWeight: 500,
 							fontSize: "30px",
+							lineHeight: "37.59px",
 						}}
 					>
 						My Story
@@ -51,6 +54,7 @@ const Header = () => {
 							color: "#ffffff",
 							fontWeight: 500,
 							fontSize: "30px",
+							lineHeight: "37.59px",
 						}}
 					>
 						News Letter
@@ -62,6 +66,7 @@ const Header = () => {
 							color: "#ffffff",
 							fontWeight: 500,
 							fontSize: "30px",
+							lineHeight: "37.59px",
 						}}
 					>
 						Contact
