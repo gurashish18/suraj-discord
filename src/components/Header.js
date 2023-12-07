@@ -3,21 +3,25 @@
 import { IconButton, Stack, Typography } from "@mui/material";
 import { Sun } from "@phosphor-icons/react/dist/ssr";
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { toggleDarkMode } from "../features/switchMode";
 
 const Header = () => {
+	const isDarkMode = useSelector((state) => state.isDarkMode.darkMode);
+	const dispatch = useDispatch();
 	return (
 		<Stack
 			direction={"row"}
 			alignItems={"center"}
 			justifyContent={"space-between"}
 			p={2}
-			sx={{ backgroundColor: "#000000" }}
+			sx={{ backgroundColor: isDarkMode ? "#000000" : "#ffffff" }}
 		>
 			<Typography
 				sx={{
 					fontWeight: 600,
 					fontSize: "36px",
-					color: "#ffffff",
+					color: isDarkMode ? "#ffffff" : "#000000",
 					lineHeight: "45.54px",
 				}}
 			>
@@ -27,7 +31,7 @@ const Header = () => {
 				<IconButton disableRipple={true}>
 					<Typography
 						sx={{
-							color: "#ffffff",
+							color: isDarkMode ? "#ffffff" : "#000000",
 							fontWeight: 500,
 							fontSize: "30px",
 							lineHeight: "37.59px",
@@ -39,7 +43,7 @@ const Header = () => {
 				<IconButton disableRipple={true}>
 					<Typography
 						sx={{
-							color: "#ffffff",
+							color: isDarkMode ? "#ffffff" : "#000000",
 							fontWeight: 500,
 							fontSize: "30px",
 							lineHeight: "37.59px",
@@ -51,7 +55,7 @@ const Header = () => {
 				<IconButton disableRipple={true}>
 					<Typography
 						sx={{
-							color: "#ffffff",
+							color: isDarkMode ? "#ffffff" : "#000000",
 							fontWeight: 500,
 							fontSize: "30px",
 							lineHeight: "37.59px",
@@ -63,7 +67,7 @@ const Header = () => {
 				<IconButton disableRipple={true}>
 					<Typography
 						sx={{
-							color: "#ffffff",
+							color: isDarkMode ? "#ffffff" : "#000000",
 							fontWeight: 500,
 							fontSize: "30px",
 							lineHeight: "37.59px",
@@ -72,7 +76,10 @@ const Header = () => {
 						Contact
 					</Typography>
 				</IconButton>
-				<IconButton disableRipple={true}>
+				<IconButton
+					disableRipple={true}
+					onClick={() => dispatch(toggleDarkMode())}
+				>
 					<Sun size={40} color={"#FF2323"} />
 				</IconButton>
 			</Stack>
