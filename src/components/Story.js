@@ -2,8 +2,10 @@
 
 import { Stack, Typography } from "@mui/material";
 import React from "react";
+import { useSelector } from "react-redux";
 
 const Story = () => {
+	const isDarkMode = useSelector((state) => state.isDarkMode.darkMode);
 	return (
 		<Stack
 			display={"flex"}
@@ -25,7 +27,7 @@ const Story = () => {
 						fontSize: "26px",
 						fontWeight: 500,
 						lineHeight: "32.89px",
-						color: "#5D5D5C",
+						color: isDarkMode ? "#5D5D5C" : "#5D5D5C",
 					}}
 				>
 					Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -39,7 +41,10 @@ const Story = () => {
 				flex={0.5}
 				height={"100%"}
 				width={"100%"}
-				sx={{ backgroundColor: "#282828", borderRadius: "25px" }}
+				sx={{
+					backgroundColor: isDarkMode ? "#282828" : "#D7D7D7",
+					borderRadius: "25px",
+				}}
 			></Stack>
 		</Stack>
 	);

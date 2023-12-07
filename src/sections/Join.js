@@ -8,10 +8,12 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import React, { useState } from "react";
 import Button from "../components/Button";
+import { useSelector } from "react-redux";
 
 const Options = ["Linkedin", "University fair", "Senior"];
 
 const Join = () => {
+	const isDarkMode = useSelector((state) => state.isDarkMode.darkMode);
 	const [selectedOption, setSelectedOption] = useState("");
 	const handleInputChange = (event) => {
 		setSelectedOption(event.target.value);
@@ -23,7 +25,7 @@ const Join = () => {
 			flexDirection={"row"}
 			height={"90vh"}
 			p={4}
-			sx={{ backgroundColor: "#171717" }}
+			sx={{ backgroundColor: isDarkMode ? "#171717" : "#F6F6F6" }}
 		>
 			<Stack width={"100%"}>
 				<Typography
@@ -31,7 +33,7 @@ const Join = () => {
 						fontSize: "50px",
 						fontWeight: 600,
 						lineHeight: "59.6px",
-						color: "#9FB2B2",
+						color: isDarkMode ? "#9FB2B2" : "#728181",
 					}}
 				>
 					Join GradYard
@@ -46,8 +48,8 @@ const Join = () => {
 						type={"text"}
 						style={{
 							border: "none",
-							backgroundColor: "#2B2B2B",
-							color: "#727272",
+							backgroundColor: isDarkMode ? "#2B2B2B" : "#D4D4D4",
+							color: isDarkMode ? "#727272" : "#727272",
 							borderRadius: "8px",
 							padding: "14px",
 							fontSize: "26px",
@@ -61,8 +63,8 @@ const Join = () => {
 						type={"email"}
 						style={{
 							border: "none",
-							backgroundColor: "#2B2B2B",
-							color: "#727272",
+							backgroundColor: isDarkMode ? "#2B2B2B" : "#D4D4D4",
+							color: isDarkMode ? "#727272" : "#727272",
 							borderRadius: "8px",
 							padding: "14px",
 							fontSize: "26px",
@@ -76,8 +78,8 @@ const Join = () => {
 						type={"text"}
 						style={{
 							border: "none",
-							backgroundColor: "#2B2B2B",
-							color: "#727272",
+							backgroundColor: isDarkMode ? "#2B2B2B" : "#D4D4D4",
+							color: isDarkMode ? "#727272" : "#727272",
 							borderRadius: "8px",
 							padding: "14px",
 							fontSize: "26px",
@@ -89,8 +91,8 @@ const Join = () => {
 					<select
 						style={{
 							border: "none",
-							backgroundColor: "#2B2B2B",
-							color: "#727272",
+							backgroundColor: isDarkMode ? "#2B2B2B" : "#D4D4D4",
+							color: isDarkMode ? "#727272" : "#727272",
 							borderRadius: "8px",
 							padding: "14px",
 							fontSize: "26px",
@@ -123,35 +125,44 @@ const Join = () => {
 						<IconButton
 							p={2}
 							sx={{
-								backgroundColor: "#262626",
+								backgroundColor: isDarkMode ? "#262626" : "#D9D9D9",
 								borderRadius: "50px",
 								height: "70px",
 								width: "70px",
 							}}
 						>
-							<LinkedinLogo size={40} color={"#9FB2B2"} />
+							<LinkedinLogo
+								size={40}
+								color={isDarkMode ? "#9FB2B2" : "#728181"}
+							/>
 						</IconButton>
 						<IconButton
 							p={2}
 							sx={{
-								backgroundColor: "#262626",
+								backgroundColor: isDarkMode ? "#262626" : "#D9D9D9",
 								borderRadius: "50px",
 								height: "70px",
 								width: "70px",
 							}}
 						>
-							<YoutubeLogo size={40} color={"#9FB2B2"} />
+							<YoutubeLogo
+								size={40}
+								color={isDarkMode ? "#9FB2B2" : "#728181"}
+							/>
 						</IconButton>
 						<IconButton
 							p={2}
 							sx={{
-								backgroundColor: "#262626",
+								backgroundColor: isDarkMode ? "#262626" : "#D9D9D9",
 								borderRadius: "50px",
 								height: "70px",
 								width: "70px",
 							}}
 						>
-							<DiscordLogo size={40} color={"#9FB2B2"} />
+							<DiscordLogo
+								size={40}
+								color={isDarkMode ? "#9FB2B2" : "#728181"}
+							/>
 						</IconButton>
 					</Stack>
 				</Stack>

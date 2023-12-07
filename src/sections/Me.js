@@ -8,8 +8,10 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import React from "react";
 import Button from "../components/Button";
+import { useSelector } from "react-redux";
 
 const Me = () => {
+	const isDarkMode = useSelector((state) => state.isDarkMode.darkMode);
 	return (
 		<Stack
 			display={"flex"}
@@ -17,7 +19,7 @@ const Me = () => {
 			height={"620px"}
 			p={2}
 			gap={2}
-			sx={{ backgroundColor: "#000000" }}
+			sx={{ backgroundColor: isDarkMode ? "#000000" : "#ffffff" }}
 		>
 			<Stack
 				flex={0.7}
@@ -26,7 +28,10 @@ const Me = () => {
 				justifyContent={"space-between"}
 				height={"100%"}
 				width={"100%"}
-				sx={{ backgroundColor: "#171717", borderRadius: "25px" }}
+				sx={{
+					backgroundColor: isDarkMode ? "#171717" : "#F6F6F6",
+					borderRadius: "25px",
+				}}
 				p={4}
 			>
 				<Stack>
@@ -35,7 +40,7 @@ const Me = () => {
 							fontSize: "60px",
 							fontWeight: 600,
 							lineHeight: "75.9px",
-							color: "#9FB2B2",
+							color: isDarkMode ? "#9FB2B2" : "#728181",
 						}}
 					>
 						Lorem Ipsum is simply <br /> dummy text of the printing <br />
@@ -47,7 +52,7 @@ const Me = () => {
 							fontSize: "26px",
 							fontWeight: 500,
 							lineHeight: "32.89px",
-							color: "#5D5D5C",
+							color: isDarkMode ? "#5D5D5C" : "#5D5D5C",
 						}}
 					>
 						Lorem Ipsum is simply dummy text of the printing and <br />{" "}
@@ -65,35 +70,38 @@ const Me = () => {
 					<IconButton
 						p={2}
 						sx={{
-							backgroundColor: "#262626",
+							backgroundColor: isDarkMode ? "#262626" : "#D9D9D9",
 							borderRadius: "50px",
 							height: "70px",
 							width: "70px",
 						}}
 					>
-						<LinkedinLogo size={40} color={"#9FB2B2"} />
+						<LinkedinLogo
+							size={40}
+							color={isDarkMode ? "#9FB2B2" : "#728181"}
+						/>
 					</IconButton>
 					<IconButton
 						p={2}
 						sx={{
-							backgroundColor: "#262626",
+							backgroundColor: isDarkMode ? "#262626" : "#D9D9D9",
 							borderRadius: "50px",
 							height: "70px",
 							width: "70px",
 						}}
 					>
-						<YoutubeLogo size={40} color={"#9FB2B2"} />
+						<YoutubeLogo size={40} color={isDarkMode ? "#9FB2B2" : "#728181"} />
 					</IconButton>
 					<IconButton
 						p={2}
 						sx={{
-							backgroundColor: "#262626",
+							backgroundColor: isDarkMode ? "#262626" : "#D9D9D9",
 							borderRadius: "50px",
 							height: "70px",
 							width: "70px",
 						}}
 					>
-						<DiscordLogo size={40} color={"#9FB2B2"} />
+						<DiscordLogo size={40} color={isDarkMode ? "#9FB2B2" : "#728181"} />
 					</IconButton>
 				</Stack>
 			</Stack>
@@ -101,10 +109,11 @@ const Me = () => {
 				flex={0.3}
 				height={"100%"}
 				width={"100%"}
-				sx={{ backgroundColor: "#171717", borderRadius: "25px" }}
-			>
-				hi
-			</Stack>
+				sx={{
+					backgroundColor: isDarkMode ? "#171717" : "#D7D7D7",
+					borderRadius: "25px",
+				}}
+			></Stack>
 		</Stack>
 	);
 };

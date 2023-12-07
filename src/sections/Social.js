@@ -10,8 +10,10 @@ import Background1 from "../assets/background1.jpg";
 import Background2 from "../assets/Background2.jpg";
 import Background3 from "../assets/background3.jpg";
 import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
+import { useSelector } from "react-redux";
 
 const Social = () => {
+	const isDarkMode = useSelector((state) => state.isDarkMode.darkMode);
 	return (
 		<Stack
 			display={"flex"}
@@ -19,14 +21,17 @@ const Social = () => {
 			height={"880px"}
 			p={2}
 			gap={2}
-			sx={{ backgroundColor: "#000000" }}
+			sx={{ backgroundColor: isDarkMode ? "#000000" : "#FFFFFF" }}
 		>
 			<Stack
 				flex={0.7}
 				display={"flex"}
 				height={"100%"}
 				width={"100%"}
-				sx={{ backgroundColor: "#171717", borderRadius: "25px" }}
+				sx={{
+					backgroundColor: isDarkMode ? "#171717" : "#F6F6F6",
+					borderRadius: "25px",
+				}}
 				p={4}
 			>
 				<Stack
@@ -40,7 +45,7 @@ const Social = () => {
 							fontSize: "60px",
 							fontWeight: 600,
 							lineHeight: "75.9px",
-							color: "#9FB2B2",
+							color: isDarkMode ? "#9FB2B2" : "#728181",
 						}}
 					>
 						We are building <br />
@@ -57,7 +62,7 @@ const Social = () => {
 					<IconButton
 						p={2}
 						sx={{
-							backgroundColor: "#262626",
+							backgroundColor: isDarkMode ? "#262626" : "#D9D9D9",
 							borderRadius: "50px",
 							height: "70px",
 							width: "70px",
@@ -72,7 +77,7 @@ const Social = () => {
 						fontSize: "26px",
 						fontWeight: 500,
 						lineHeight: "32.89px",
-						color: "#5D5D5C",
+						color: isDarkMode ? "#5D5D5C" : "#5D5D5C",
 					}}
 				>
 					Lorem Ipsum is simply dummy text of the printing and typesetting{" "}
@@ -86,7 +91,10 @@ const Social = () => {
 					marginTop={"20px"}
 					height={"100%"}
 					width={"100%"}
-					sx={{ backgroundColor: "#282828", borderRadius: "25px" }}
+					sx={{
+						backgroundColor: isDarkMode ? "#282828" : "#D7D7D7",
+						borderRadius: "25px",
+					}}
 				></Stack>
 			</Stack>
 			<Stack flex={0.3} display={"flex"} height={"100%"} width={"100%"} gap={4}>

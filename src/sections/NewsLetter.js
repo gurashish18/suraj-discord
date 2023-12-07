@@ -1,10 +1,12 @@
 /** @format */
 
-import { Stack, Typography, TextField } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import React from "react";
 import Button from "../components/Button";
+import { useSelector } from "react-redux";
 
 const NewsLetter = () => {
+	const isDarkMode = useSelector((state) => state.isDarkMode.darkMode);
 	return (
 		<Stack
 			display={"flex"}
@@ -13,7 +15,7 @@ const NewsLetter = () => {
 			height={"90vh"}
 			p={2}
 			gap={2}
-			sx={{ backgroundColor: "#000000" }}
+			sx={{ backgroundColor: isDarkMode ? "#000000" : "#FFFFFF" }}
 		>
 			<Stack maxWidth={"80%"}>
 				<Stack>
@@ -22,7 +24,7 @@ const NewsLetter = () => {
 							fontSize: "60px",
 							fontWeight: 600,
 							lineHeight: "75.9px",
-							color: "#9FB2B2",
+							color: isDarkMode ? "#9FB2B2" : "#728181",
 							textAlign: "center",
 						}}
 					>
@@ -42,8 +44,8 @@ const NewsLetter = () => {
 						type={"email"}
 						style={{
 							border: "none",
-							backgroundColor: "#171717",
-							color: "#727272",
+							backgroundColor: isDarkMode ? "#171717" : "#F6F6F6",
+							color: isDarkMode ? "#727272" : "#5D5D5C",
 							borderRadius: "8px",
 							padding: "12px",
 							fontSize: "26px",

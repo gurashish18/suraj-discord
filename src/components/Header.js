@@ -21,7 +21,7 @@ const Header = () => {
 				sx={{
 					fontWeight: 600,
 					fontSize: "36px",
-					color: isDarkMode ? "#ffffff" : "#000000",
+					color: isDarkMode ? "#ffffff" : "#0D0D0D",
 					lineHeight: "45.54px",
 				}}
 			>
@@ -31,7 +31,7 @@ const Header = () => {
 				<IconButton disableRipple={true}>
 					<Typography
 						sx={{
-							color: isDarkMode ? "#ffffff" : "#000000",
+							color: isDarkMode ? "#ffffff" : "#0D0D0D",
 							fontWeight: 500,
 							fontSize: "30px",
 							lineHeight: "37.59px",
@@ -43,7 +43,7 @@ const Header = () => {
 				<IconButton disableRipple={true}>
 					<Typography
 						sx={{
-							color: isDarkMode ? "#ffffff" : "#000000",
+							color: isDarkMode ? "#ffffff" : "#0D0D0D",
 							fontWeight: 500,
 							fontSize: "30px",
 							lineHeight: "37.59px",
@@ -55,7 +55,7 @@ const Header = () => {
 				<IconButton disableRipple={true}>
 					<Typography
 						sx={{
-							color: isDarkMode ? "#ffffff" : "#000000",
+							color: isDarkMode ? "#ffffff" : "#0D0D0D",
 							fontWeight: 500,
 							fontSize: "30px",
 							lineHeight: "37.59px",
@@ -67,7 +67,7 @@ const Header = () => {
 				<IconButton disableRipple={true}>
 					<Typography
 						sx={{
-							color: isDarkMode ? "#ffffff" : "#000000",
+							color: isDarkMode ? "#ffffff" : "#0D0D0D",
 							fontWeight: 500,
 							fontSize: "30px",
 							lineHeight: "37.59px",

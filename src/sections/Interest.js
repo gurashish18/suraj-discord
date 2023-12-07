@@ -3,8 +3,10 @@
 import { Stack, Typography, IconButton } from "@mui/material";
 import { ArrowDownLeft, ArrowDownRight } from "@phosphor-icons/react";
 import React from "react";
+import { useSelector } from "react-redux";
 
 const Interest = () => {
+	const isDarkMode = useSelector((state) => state.isDarkMode.darkMode);
 	return (
 		<Stack
 			display={"flex"}
@@ -12,7 +14,7 @@ const Interest = () => {
 			height={"480px"}
 			p={2}
 			gap={2}
-			sx={{ backgroundColor: "#000000" }}
+			sx={{ backgroundColor: isDarkMode ? "#000000" : "#FFFFFF" }}
 		>
 			<Stack
 				flex={0.7}
@@ -22,13 +24,16 @@ const Interest = () => {
 				flexDirection={"row"}
 				height={"100%"}
 				width={"100%"}
-				sx={{ backgroundColor: "#171717", borderRadius: "25px" }}
+				sx={{
+					backgroundColor: isDarkMode ? "#171717" : "#F6F6F6",
+					borderRadius: "25px",
+				}}
 				p={4}
 			>
 				<IconButton
 					p={2}
 					sx={{
-						backgroundColor: "#262626",
+						backgroundColor: isDarkMode ? "#262626" : "#CDCDCD",
 						borderRadius: "50px",
 						height: "70px",
 						width: "70px",
@@ -41,10 +46,15 @@ const Interest = () => {
 						fontSize: "40px",
 						fontWeight: 500,
 						lineHeight: "50.6px",
-						color: "#FFFFFF",
+						color: isDarkMode ? "#FFFFFF" : "#728181",
 					}}
 				>
-					<span style={{ fontweight: 700, color: "#9FB2B2" }}>
+					<span
+						style={{
+							fontweight: 700,
+							color: isDarkMode ? "#9FB2B2" : "#5D5D5C",
+						}}
+					>
 						I believe in{" "}
 					</span>
 					Lorem Ipsum is simply <br /> dummy text of the printing and <br />
@@ -53,7 +63,7 @@ const Interest = () => {
 				<IconButton
 					p={2}
 					sx={{
-						backgroundColor: "#262626",
+						backgroundColor: isDarkMode ? "#262626" : "#CDCDCD",
 						borderRadius: "50px",
 						height: "70px",
 						width: "70px",
@@ -69,7 +79,10 @@ const Interest = () => {
 				justifyContent={"space-between"}
 				height={"100%"}
 				width={"100%"}
-				sx={{ backgroundColor: "#171717", borderRadius: "25px" }}
+				sx={{
+					backgroundColor: isDarkMode ? "#171717" : "#F6F6F6",
+					borderRadius: "25px",
+				}}
 				p={4}
 			>
 				<Typography
@@ -77,10 +90,17 @@ const Interest = () => {
 						fontSize: "40px",
 						fontWeight: 500,
 						lineHeight: "50.6px",
-						color: "#FFFFFF",
+						color: isDarkMode ? "#FFFFFF" : "#728181",
 					}}
 				>
-					<span style={{ fontweight: 700, color: "#9FB2B2" }}>PS.</span>
+					<span
+						style={{
+							fontweight: 700,
+							color: isDarkMode ? "#9FB2B2" : "#5D5D5C",
+						}}
+					>
+						PS.
+					</span>
 					<br /> I am really interested <br /> in discussing books, <br />{" "}
 					movies, philosophy <br /> and pets so if you like <br /> any one of
 					those,

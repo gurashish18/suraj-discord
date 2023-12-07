@@ -3,6 +3,7 @@
 import { IconButton, Stack, Typography } from "@mui/material";
 import React from "react";
 import Story from "../components/Story";
+import { useSelector } from "react-redux";
 
 const data = [
 	{
@@ -24,6 +25,7 @@ const data = [
 ];
 
 const MyStory = () => {
+	const isDarkMode = useSelector((state) => state.isDarkMode.darkMode);
 	return (
 		<Stack
 			display={"flex"}
@@ -31,7 +33,7 @@ const MyStory = () => {
 			height={"480px"}
 			p={2}
 			gap={2}
-			sx={{ backgroundColor: "#000000" }}
+			sx={{ backgroundColor: isDarkMode ? "#000000" : "#FFFFFF" }}
 		>
 			<Stack
 				flex={0.3}
@@ -40,7 +42,10 @@ const MyStory = () => {
 				justifyContent={"space-between"}
 				height={"100%"}
 				width={"100%"}
-				sx={{ backgroundColor: "#171717", borderRadius: "25px" }}
+				sx={{
+					backgroundColor: isDarkMode ? "#171717" : "#F6F6F6",
+					borderRadius: "25px",
+				}}
 				p={4}
 			>
 				<Typography
@@ -48,7 +53,7 @@ const MyStory = () => {
 						fontSize: "60px",
 						fontWeight: 600,
 						lineHeight: "75.9px",
-						color: "#9FB2B2",
+						color: isDarkMode ? "#9FB2B2" : "#728181",
 					}}
 				>
 					My Story
@@ -63,7 +68,7 @@ const MyStory = () => {
 									fontSize: "26px",
 									fontWeight: 500,
 									lineHeight: "32.89px",
-									color: "#5D5D5C",
+									color: isDarkMode ? "#5D5D5C" : "#5D5D5C",
 								}}
 							>
 								{d.title}
@@ -76,7 +81,10 @@ const MyStory = () => {
 				flex={0.7}
 				height={"100%"}
 				width={"100%"}
-				sx={{ backgroundColor: "#171717", borderRadius: "25px" }}
+				sx={{
+					backgroundColor: isDarkMode ? "#171717" : "#F6F6F6",
+					borderRadius: "25px",
+				}}
 				p={4}
 			>
 				<Story />

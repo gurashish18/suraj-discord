@@ -3,14 +3,19 @@
 import { Stack, Typography } from "@mui/material";
 import React from "react";
 import Button from "./Button";
+import { useSelector } from "react-redux";
 
 const Article = () => {
+	const isDarkMode = useSelector((state) => state.isDarkMode.darkMode);
 	return (
 		<Stack height={"100%"} width={"100%"}>
 			<Stack
 				height={"320px"}
 				width={"100%"}
-				sx={{ backgroundColor: "#282828", borderRadius: "25px" }}
+				sx={{
+					backgroundColor: isDarkMode ? "#282828" : "#D7D7D7",
+					borderRadius: "25px",
+				}}
 			></Stack>
 			<Stack
 				sx={{
@@ -22,7 +27,7 @@ const Article = () => {
 						fontSize: "40px",
 						fontWeight: 600,
 						lineHeight: "50.6px",
-						color: "#9FB2B2",
+						color: isDarkMode ? "#9FB2B2" : "#728181",
 					}}
 				>
 					Article Name
@@ -32,7 +37,7 @@ const Article = () => {
 						fontSize: "26px",
 						fontWeight: 500,
 						lineHeight: "32.89px",
-						color: "#5D5D5C",
+						color: isDarkMode ? "#5D5D5C" : "#5D5D5C",
 						marginBottom: "20px",
 					}}
 				>
