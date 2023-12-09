@@ -11,14 +11,14 @@ const Youtube = () => {
 	return (
 		<Stack
 			display={"flex"}
-			flexDirection={"row"}
-			height={"480px"}
+			flexDirection={{ lg: "row", md: "row", sm: "column", xs: "column" }}
+			height={{ lg: "480px", md: "480px", sm: "540px", xs: "540px" }}
 			p={2}
 			gap={2}
 			sx={{ backgroundColor: isDarkMode ? "#000000" : "#FFFFFF" }}
 		>
 			<Stack
-				flex={0.5}
+				flex={{ lg: 0.5, md: 0.5, sm: 0.3, xs: 0.3 }}
 				display={"flex"}
 				alignItems={"center"}
 				justifyContent={"center"}
@@ -32,17 +32,17 @@ const Youtube = () => {
 			>
 				<Typography
 					sx={{
-						fontSize: "60px",
+						fontSize: { lg: "60px", md: "50px", sm: "40px", xs: "30px" },
 						fontWeight: 600,
 						lineHeight: "75.9px",
 						color: isDarkMode ? "#9FB2B2" : "#728181",
 					}}
 				>
-					I was born to develop <br /> stuff and tell stories!!!
+					I was born to develop stuff and tell stories!!!
 				</Typography>
 			</Stack>
 			<Stack
-				flex={0.5}
+				flex={{ lg: 0.5, md: 0.5, sm: 0.7, xs: 0.7 }}
 				display={"flex"}
 				justifyContent={"flex-end"}
 				height={"100%"}
@@ -64,11 +64,14 @@ const Youtube = () => {
 						sx={{
 							backgroundColor: isDarkMode ? "#262626" : "#D9D9D9",
 							borderRadius: "50px",
-							height: "70px",
-							width: "70px",
+							height: { lg: "70px", md: "65px", sm: "60px", xs: "55px" },
+							width: { lg: "70px", md: "65px", sm: "60px", xs: "55px" },
 						}}
 					>
-						<YoutubeLogo size={40} color={isDarkMode ? "#9FB2B2" : "#728181"} />
+						<YoutubeLogo
+							size={{ lg: 40, md: 30, sm: 20, xs: 10 }}
+							color={isDarkMode ? "#9FB2B2" : "#728181"}
+						/>
 					</IconButton>
 					<Button text={"Subscribe"} />
 				</Stack>

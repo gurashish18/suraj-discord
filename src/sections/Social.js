@@ -17,14 +17,14 @@ const Social = () => {
 	return (
 		<Stack
 			display={"flex"}
-			flexDirection={"row"}
+			flexDirection={{ lg: "row", md: "column", sm: "column", xs: "column" }}
 			height={"880px"}
 			p={2}
 			gap={2}
 			sx={{ backgroundColor: isDarkMode ? "#000000" : "#FFFFFF" }}
 		>
 			<Stack
-				flex={0.7}
+				flex={{ lg: 0.7, md: 0.7, sm: 0.7, xs: 0.7 }}
 				display={"flex"}
 				height={"100%"}
 				width={"100%"}
@@ -42,16 +42,21 @@ const Social = () => {
 				>
 					<Typography
 						sx={{
-							fontSize: "60px",
+							fontSize: { lg: "60px", md: "50px", sm: "40px", xs: "30px" },
 							fontWeight: 600,
-							lineHeight: "75.9px",
+							lineHeight: {
+								lg: "75.9px",
+								md: "65.9px",
+								sm: "55.9px",
+								xs: "45.9px",
+							},
 							color: isDarkMode ? "#9FB2B2" : "#728181",
 						}}
 					>
 						We are building <br />
 						<span
 							style={{
-								fontSize: "80px",
+								fontSize: { lg: "80px", md: "70px" },
 								fontWeight: 700,
 								lineHeight: "101.2px",
 							}}
@@ -64,28 +69,34 @@ const Social = () => {
 						sx={{
 							backgroundColor: isDarkMode ? "#262626" : "#D9D9D9",
 							borderRadius: "50px",
-							height: "70px",
-							width: "70px",
+							height: { lg: "70px", md: "65px", sm: "60px", xs: "55px" },
+							width: { lg: "70px", md: "65px", sm: "60px", xs: "55px" },
 						}}
 					>
-						<ArrowUpRight size={40} color={"#FF2323"} />
+						<ArrowUpRight
+							size={{ lg: 40, md: 30, sm: 20, xs: 10 }}
+							color={"#FF2323"}
+						/>
 					</IconButton>
 				</Stack>
 				<Typography
 					marginTop={"20px"}
 					sx={{
-						fontSize: "26px",
+						fontSize: { lg: "26px", md: "24px", sm: "22px", xs: "20px" },
 						fontWeight: 500,
-						lineHeight: "32.89px",
+						lineHeight: {
+							lg: "32.89px",
+							md: "22.89px",
+							sm: "22.89px",
+							xs: "22.89px",
+						},
 						color: isDarkMode ? "#5D5D5C" : "#5D5D5C",
 					}}
 				>
-					Lorem Ipsum is simply dummy text of the printing and typesetting{" "}
-					<br />
-					industry. Lorem Ipsum has been the industry's standard dummy text{" "}
-					<br /> ever since the 1500s, when an unknown printer took a galley of{" "}
-					<br />
-					type and scrambled it to make a type specimen book.
+					Lorem Ipsum is simply dummy text of the printing and typesetting
+					industry. Lorem Ipsum has been the industry's standard dummy text ever
+					since the 1500s, when an unknown printer took a galley of type and
+					scrambled it to make a type specimen book.
 				</Typography>
 				<Stack
 					marginTop={"20px"}
@@ -97,7 +108,14 @@ const Social = () => {
 					}}
 				></Stack>
 			</Stack>
-			<Stack flex={0.3} display={"flex"} height={"100%"} width={"100%"} gap={4}>
+			<Stack
+				flex={{ lg: 0.3, md: 0.3, sm: 0.3, xs: 0.3 }}
+				display={"flex"}
+				flexDirection={{ lg: "column", md: "row", sm: "row", xs: "row" }}
+				height={"100%"}
+				width={"100%"}
+				gap={4}
+			>
 				<SocialLink
 					title={"Join GradYard"}
 					subtitle={"@bythebug"}

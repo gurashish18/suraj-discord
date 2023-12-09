@@ -15,7 +15,7 @@ const Story = () => {
 			width={"100%"}
 		>
 			<Stack
-				flex={0.5}
+				flex={{ lg: 0.5, md: 0.5, sm: 0.6, xs: 0.6 }}
 				display={"flex"}
 				height={"100%"}
 				width={"100%"}
@@ -24,7 +24,7 @@ const Story = () => {
 				<Typography
 					marginTop={"20px"}
 					sx={{
-						fontSize: "26px",
+						fontSize: { lg: "26px", md: "24px" },
 						fontWeight: 500,
 						lineHeight: "32.89px",
 						color: isDarkMode ? "#5D5D5C" : "#5D5D5C",
@@ -38,7 +38,7 @@ const Story = () => {
 				</Typography>
 			</Stack>
 			<Stack
-				flex={0.5}
+				flex={{ lg: 0.5, md: 0.5, sm: 0.4, xs: 0.4 }}
 				height={"100%"}
 				width={"100%"}
 				sx={{

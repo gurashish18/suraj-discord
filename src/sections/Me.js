@@ -15,14 +15,14 @@ const Me = () => {
 	return (
 		<Stack
 			display={"flex"}
-			flexDirection={"row"}
-			height={"620px"}
+			flexDirection={{ lg: "row", md: "column" }}
+			height={{ lg: "620px" }}
 			p={2}
 			gap={2}
 			sx={{ backgroundColor: isDarkMode ? "#000000" : "#ffffff" }}
 		>
 			<Stack
-				flex={0.7}
+				flex={{ lg: 0.7, md: 0.6 }}
 				display={"flex"}
 				flexDirection={"column"}
 				justifyContent={"space-between"}
@@ -37,9 +37,14 @@ const Me = () => {
 				<Stack>
 					<Typography
 						sx={{
-							fontSize: "60px",
+							fontSize: { lg: "60px", md: "50px", sm: "40px", xs: "30px" },
 							fontWeight: 600,
-							lineHeight: "75.9px",
+							lineHeight: {
+								lg: "75.9px",
+								md: "65.9px",
+								sm: "55.9px",
+								xs: "45.9px",
+							},
 							color: isDarkMode ? "#9FB2B2" : "#728181",
 						}}
 					>
@@ -49,9 +54,14 @@ const Me = () => {
 					<Typography
 						marginTop={"20px"}
 						sx={{
-							fontSize: "26px",
+							fontSize: { lg: "26px", md: "24px", sm: "22px", xs: "20px" },
 							fontWeight: 500,
-							lineHeight: "32.89px",
+							lineHeight: {
+								lg: "32.89px",
+								md: "22.89px",
+								sm: "22.89px",
+								xs: "22.89px",
+							},
 							color: isDarkMode ? "#5D5D5C" : "#5D5D5C",
 						}}
 					>
@@ -65,6 +75,7 @@ const Me = () => {
 					flexDirection={"row"}
 					alignItems={"center"}
 					gap={2}
+					marginTop={{ lg: "0px", md: "20px" }}
 				>
 					<Button text={"Contact Me"} />
 					<IconButton
@@ -106,7 +117,8 @@ const Me = () => {
 				</Stack>
 			</Stack>
 			<Stack
-				flex={0.3}
+				display={{ lg: "flex", md: "none" }}
+				flex={{ lg: 0.3, md: 0.4 }}
 				height={"100%"}
 				width={"100%"}
 				sx={{

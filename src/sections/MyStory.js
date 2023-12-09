@@ -29,17 +29,23 @@ const MyStory = () => {
 	return (
 		<Stack
 			display={"flex"}
-			flexDirection={"row"}
-			height={"480px"}
+			flexDirection={{ lg: "row", md: "row", sm: "column", xs: "column" }}
+			height={{ lg: "480px", sm: "520px" }}
 			p={2}
 			gap={2}
 			sx={{ backgroundColor: isDarkMode ? "#000000" : "#FFFFFF" }}
 		>
 			<Stack
-				flex={0.3}
+				flex={{ lg: 0.3, md: 0.3, sm: 1, xs: 1 }}
 				display={"flex"}
 				flexDirection={"column"}
 				justifyContent={"space-between"}
+				alignItems={{
+					lg: "flex-start",
+					md: "flex-start",
+					sm: "center",
+					xs: "center",
+				}}
 				height={"100%"}
 				width={"100%"}
 				sx={{
@@ -50,9 +56,14 @@ const MyStory = () => {
 			>
 				<Typography
 					sx={{
-						fontSize: "60px",
+						fontSize: { lg: "60px", md: "50px", sm: "40px", xs: "30px" },
 						fontWeight: 600,
-						lineHeight: "75.9px",
+						lineHeight: {
+							lg: "75.9px",
+							md: "65.9px",
+							sm: "55.9px",
+							xs: "45.9px",
+						},
 						color: isDarkMode ? "#9FB2B2" : "#728181",
 					}}
 				>
@@ -65,9 +76,14 @@ const MyStory = () => {
 								key={d.id}
 								marginTop={"20px"}
 								sx={{
-									fontSize: "26px",
+									fontSize: { lg: "26px", md: "24px", sm: "22px", xs: "20px" },
 									fontWeight: 500,
-									lineHeight: "32.89px",
+									lineHeight: {
+										lg: "32.89px",
+										md: "22.89px",
+										sm: "22.89px",
+										xs: "22.89px",
+									},
 									color: isDarkMode ? "#5D5D5C" : "#5D5D5C",
 								}}
 							>
@@ -78,7 +94,7 @@ const MyStory = () => {
 				</Stack>
 			</Stack>
 			<Stack
-				flex={0.7}
+				flex={{ lg: 0.7, md: 0.7, sm: 1, xs: 1 }}
 				height={"100%"}
 				width={"100%"}
 				sx={{

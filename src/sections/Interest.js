@@ -10,17 +10,17 @@ const Interest = () => {
 	return (
 		<Stack
 			display={"flex"}
-			flexDirection={"row"}
-			height={"480px"}
+			flexDirection={{ lg: "row", md: "row", sm: "column", xs: "column" }}
+			height={"520px"}
 			p={2}
 			gap={2}
 			sx={{ backgroundColor: isDarkMode ? "#000000" : "#FFFFFF" }}
 		>
 			<Stack
-				flex={0.7}
+				flex={{ lg: 0.6, md: 0.6, sm: 0.5, xs: 0.5 }}
 				display={"flex"}
 				alignItems={"center"}
-				justifyContent={"space-evenly"}
+				justifyContent={"space-between"}
 				flexDirection={"row"}
 				height={"100%"}
 				width={"100%"}
@@ -35,18 +35,27 @@ const Interest = () => {
 					sx={{
 						backgroundColor: isDarkMode ? "#262626" : "#CDCDCD",
 						borderRadius: "50px",
-						height: "70px",
-						width: "70px",
+						height: { lg: "70px", md: "65px", sm: "60px", xs: "55px" },
+						width: { lg: "70px", md: "65px", sm: "60px", xs: "55px" },
 					}}
 				>
-					<ArrowDownLeft size={40} color={"#FF2323"} />
+					<ArrowDownLeft
+						size={{ lg: 40, md: 30, sm: 20, xs: 10 }}
+						color={"#FF2323"}
+					/>
 				</IconButton>
 				<Typography
 					sx={{
-						fontSize: "40px",
+						fontSize: { lg: "40px", md: "30px", sm: "20px", xs: "15px" },
 						fontWeight: 500,
-						lineHeight: "50.6px",
+						lineHeight: {
+							lg: "50.6px",
+							md: "40.6px",
+							sm: "30.6px",
+							xs: "30.6px",
+						},
 						color: isDarkMode ? "#FFFFFF" : "#728181",
+						textAlign: "center",
 					}}
 				>
 					<span
@@ -57,26 +66,29 @@ const Interest = () => {
 					>
 						I believe in{" "}
 					</span>
-					Lorem Ipsum is simply <br /> dummy text of the printing and <br />
-					typesetting industry.
+					Lorem Ipsum is simply dummy text of the printing and typesetting
+					industry.
 				</Typography>
 				<IconButton
 					p={2}
 					sx={{
 						backgroundColor: isDarkMode ? "#262626" : "#CDCDCD",
 						borderRadius: "50px",
-						height: "70px",
-						width: "70px",
+						height: { lg: "70px", md: "65px", sm: "60px", xs: "55px" },
+						width: { lg: "70px", md: "65px", sm: "60px", xs: "55px" },
 					}}
 				>
-					<ArrowDownRight size={40} color={"#FF2323"} />
+					<ArrowDownRight
+						size={{ lg: 40, md: 30, sm: 20, xs: 10 }}
+						color={"#FF2323"}
+					/>
 				</IconButton>
 			</Stack>
 			<Stack
-				flex={0.3}
+				flex={{ lg: 0.4, md: 0.4, sm: 0.5, xs: 0.5 }}
 				display={"flex"}
 				flexDirection={"column"}
-				justifyContent={"space-between"}
+				justifyContent={"center"}
 				height={"100%"}
 				width={"100%"}
 				sx={{
@@ -87,9 +99,14 @@ const Interest = () => {
 			>
 				<Typography
 					sx={{
-						fontSize: "40px",
+						fontSize: { lg: "40px", md: "30px", sm: "20px", xs: "15px" },
 						fontWeight: 500,
-						lineHeight: "50.6px",
+						lineHeight: {
+							lg: "50.6px",
+							md: "40.6px",
+							sm: "30.6px",
+							xs: "30.6px",
+						},
 						color: isDarkMode ? "#FFFFFF" : "#728181",
 					}}
 				>
@@ -101,10 +118,8 @@ const Interest = () => {
 					>
 						PS.
 					</span>
-					<br /> I am really interested <br /> in discussing books, <br />{" "}
-					movies, philosophy <br /> and pets so if you like <br /> any one of
-					those,
-					<br /> we'll be good to go.
+					<br /> I am really interested in discussing books, movies, philosophy
+					and pets so if you like any one of those, we'll be good to go.
 				</Typography>
 			</Stack>
 		</Stack>

@@ -31,9 +31,14 @@ const SocialLink = ({ title, subtitle, bgImage, icon }) => {
 				<Stack display={"flex"}>
 					<Typography
 						sx={{
-							fontSize: "40px",
+							fontSize: { lg: "40px", md: "30px", sm: "20px", xs: "15px" },
 							fontWeight: 500,
-							lineHeight: "50.6px",
+							lineHeight: {
+								lg: "50.6px",
+								md: "40.6px",
+								sm: "30.6px",
+								xs: "30.6px",
+							},
 							color: "#9FB2B2",
 						}}
 					>
