@@ -15,7 +15,7 @@ const Story = () => {
 			width={"100%"}
 		>
 			<Stack
-				flex={{ lg: 0.5, md: 0.5, sm: 0.6, xs: 0.6 }}
+				flex={{ lg: 0.5, md: 0.5, sm: 0.5, xs: 1 }}
 				display={"flex"}
 				height={"100%"}
 				width={"100%"}
@@ -38,7 +38,8 @@ const Story = () => {
 				</Typography>
 			</Stack>
 			<Stack
-				flex={{ lg: 0.5, md: 0.5, sm: 0.4, xs: 0.4 }}
+				display={{ lg: "flex", md: "flex", sm: "flex", xs: "none" }}
+				flex={{ lg: 0.5, md: 0.5, sm: 0.5, xs: 0.5 }}
 				height={"100%"}
 				width={"100%"}
 				sx={{

@@ -10,7 +10,7 @@ const Articles = () => {
 	return (
 		<Stack
 			display={"flex"}
-			flexDirection={"row"}
+			flexDirection={{ lg: "row", md: "row", sm: "column", xs: "column" }}
 			p={2}
 			gap={2}
 			sx={{ backgroundColor: isDarkMode ? "#000000" : "#ffffff" }}

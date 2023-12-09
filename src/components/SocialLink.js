@@ -1,6 +1,6 @@
 /** @format */
 
-import { Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
 
 const SocialLink = ({ title, subtitle, bgImage, icon }) => {
@@ -11,7 +11,6 @@ const SocialLink = ({ title, subtitle, bgImage, icon }) => {
 				backgroundImage: `url(${bgImage})`,
 				backgroundSize: "cover",
 				backgroundPosition: "center",
-				// WebkitFilter: "blur(5px)",
 				borderRadius: "25px",
 			}}
 		>
@@ -22,9 +21,15 @@ const SocialLink = ({ title, subtitle, bgImage, icon }) => {
 				flexDirection={"row"}
 				alignItems={"center"}
 				justifyContent={"center"}
+				p={2}
+				gap={2}
 			>
-				<img
-					style={{ height: "100px", width: "100px" }}
+				<Box
+					component="img"
+					sx={{
+						height: { lg: "100px", md: "80px", sm: "60px", xs: "40px" },
+						width: { lg: "100px", md: "80px", sm: "60px", xs: "40px" },
+					}}
 					src={icon}
 					alt="social-icon"
 				/>
@@ -46,9 +51,8 @@ const SocialLink = ({ title, subtitle, bgImage, icon }) => {
 					</Typography>
 					<Typography
 						sx={{
-							fontSize: "24px",
+							fontSize: { lg: "24px", md: "22px", sm: "20px", xs: "18px" },
 							fontWeight: 500,
-							lineHeight: "30.36px",
 							color: "#9FB2B2",
 						}}
 					>

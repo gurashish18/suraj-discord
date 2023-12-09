@@ -24,7 +24,7 @@ const Article = () => {
 			>
 				<Typography
 					sx={{
-						fontSize: "40px",
+						fontSize: { lg: "40px", md: "35px", sm: "30px", xs: "25px" },
 						fontWeight: 600,
 						lineHeight: "50.6px",
 						color: isDarkMode ? "#9FB2B2" : "#728181",
@@ -34,9 +34,14 @@ const Article = () => {
 				</Typography>
 				<Typography
 					sx={{
-						fontSize: "26px",
+						fontSize: { lg: "26px", md: "24px", sm: "22px", xs: "20px" },
 						fontWeight: 500,
-						lineHeight: "32.89px",
+						lineHeight: {
+							lg: "32.89px",
+							md: "30.89px",
+							sm: "28.89px",
+							xs: "26.89px",
+						},
 						color: isDarkMode ? "#5D5D5C" : "#5D5D5C",
 						marginBottom: "20px",
 					}}

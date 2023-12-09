@@ -1,27 +1,34 @@
 /** @format */
 
+import { Button } from "@mui/material";
 import React from "react";
 import { useSelector } from "react-redux";
 
-const Button = ({ text }) => {
+const PrimaryButton = ({ text }) => {
 	const isDarkMode = useSelector((state) => state.isDarkMode.darkMode);
 	return (
-		<button
-			style={{
+		<Button
+			sx={{
 				border: "none",
 				backgroundColor: "#FF2323",
 				color: isDarkMode ? "#ffffff" : "#0D0D0D",
-				fontSize: "26px",
+				fontSize: { lg: "26px", md: "22px", sm: "20px", xs: "18px" },
 				fontWeight: 600,
 				borderRadius: "25px",
 				width: "225px",
-				padding: "13px 0px 13px 0px",
+				padding: {
+					lg: "13px 0px 13px 0px",
+					md: "11px 0px 11px 0px",
+					sm: "9px 0px 9px 0px",
+					xs: "7px 0px 7px 0px",
+				},
 				cursor: "pointer",
+				textTransform: "none",
 			}}
 		>
 			{text}
-		</button>
+		</Button>
 	);
 };
 
-export default Button;
+export default PrimaryButton;

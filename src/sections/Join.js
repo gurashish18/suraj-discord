@@ -23,22 +23,37 @@ const Join = () => {
 			width={"100%"}
 			display={"flex"}
 			flexDirection={"row"}
-			height={"90vh"}
+			height={"100vh"}
 			p={4}
 			sx={{ backgroundColor: isDarkMode ? "#171717" : "#F6F6F6" }}
 		>
 			<Stack width={"100%"}>
 				<Typography
 					sx={{
-						fontSize: "50px",
+						fontSize: { lg: "50px", md: "45px", sm: "40px", xs: "35px" },
 						fontWeight: 600,
-						lineHeight: "59.6px",
+						lineHeight: {
+							lg: "59.6px",
+							md: "50.9px",
+							sm: "45.9px",
+							xs: "40.9px",
+						},
 						color: isDarkMode ? "#9FB2B2" : "#728181",
 					}}
 				>
 					Join GradYard
 					<br />
-					<span style={{ fontSize: "60px", lineHeight: "71.52px" }}>
+					<span
+						style={{
+							fontSize: { lg: "60px", md: "55px", sm: "50px", xs: "45px" },
+							lineHeight: {
+								lg: "59.6px",
+								md: "50.9px",
+								sm: "45.9px",
+								xs: "40.9px",
+							},
+						}}
+					>
 						As Volunteer
 					</span>
 				</Typography>
@@ -116,9 +131,10 @@ const Join = () => {
 				</Stack>
 				<Stack
 					display={"flex"}
-					flexDirection={"row"}
+					flexDirection={{ lg: "row", md: "row", sm: "column", xs: "column" }}
 					alignItems={"center"}
 					justifyContent={"space-between"}
+					gap={2}
 				>
 					<Button text={"Send Request"} />
 					<Stack gap={4} display={"flex"} flexDirection={"row"}>

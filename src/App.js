@@ -4,6 +4,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Main from "./pages/Main";
 import { createMuiTheme, ThemeProvider } from "@mui/material";
+import Navbar from "./components/Navbar";
 
 const font = "'Be Vietnam Pro', sans-serif";
 const theme = createMuiTheme({
@@ -15,7 +16,7 @@ const theme = createMuiTheme({
 function App() {
 	return (
 		<ThemeProvider theme={theme}>
-			<Header />
+			<Navbar />
 			<Main />
 		</ThemeProvider>
 	);

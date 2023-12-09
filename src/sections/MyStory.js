@@ -30,13 +30,13 @@ const MyStory = () => {
 		<Stack
 			display={"flex"}
 			flexDirection={{ lg: "row", md: "row", sm: "column", xs: "column" }}
-			height={{ lg: "480px", sm: "520px" }}
+			height={{ lg: "480px", md: "580px", xs: "780px", sm: "820px" }}
 			p={2}
 			gap={2}
 			sx={{ backgroundColor: isDarkMode ? "#000000" : "#FFFFFF" }}
 		>
 			<Stack
-				flex={{ lg: 0.3, md: 0.3, sm: 1, xs: 1 }}
+				flex={{ lg: 0.3, md: 0.3, sm: 0.2, xs: 0.2 }}
 				display={"flex"}
 				flexDirection={"column"}
 				justifyContent={"space-between"}
@@ -69,7 +69,7 @@ const MyStory = () => {
 				>
 					My Story
 				</Typography>
-				<Stack alignItems={"flex-start"}>
+				<Stack alignItems={{ lg: "flex-start", md: "center" }} display={"flex"}>
 					{data.map((d) => (
 						<IconButton>
 							<Typography
@@ -94,7 +94,7 @@ const MyStory = () => {
 				</Stack>
 			</Stack>
 			<Stack
-				flex={{ lg: 0.7, md: 0.7, sm: 1, xs: 1 }}
+				flex={{ lg: 0.7, md: 0.7, sm: 0.8, xs: 0.8 }}
 				height={"100%"}
 				width={"100%"}
 				sx={{

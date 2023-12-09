@@ -72,48 +72,61 @@ const Me = () => {
 				</Stack>
 				<Stack
 					display={"flex"}
-					flexDirection={"row"}
+					flexDirection={{ lg: "row", md: "row", sm: "column", xs: "column" }}
 					alignItems={"center"}
 					gap={2}
-					marginTop={{ lg: "0px", md: "20px" }}
+					marginTop={{ lg: "0px", md: "20px", sm: "20px", xs: "20px" }}
 				>
 					<Button text={"Contact Me"} />
-					<IconButton
-						p={2}
-						sx={{
-							backgroundColor: isDarkMode ? "#262626" : "#D9D9D9",
-							borderRadius: "50px",
-							height: "70px",
-							width: "70px",
-						}}
+					<Stack
+						display={"flex"}
+						flexDirection={"row"}
+						alignItems={"center"}
+						gap={2}
 					>
-						<LinkedinLogo
-							size={40}
-							color={isDarkMode ? "#9FB2B2" : "#728181"}
-						/>
-					</IconButton>
-					<IconButton
-						p={2}
-						sx={{
-							backgroundColor: isDarkMode ? "#262626" : "#D9D9D9",
-							borderRadius: "50px",
-							height: "70px",
-							width: "70px",
-						}}
-					>
-						<YoutubeLogo size={40} color={isDarkMode ? "#9FB2B2" : "#728181"} />
-					</IconButton>
-					<IconButton
-						p={2}
-						sx={{
-							backgroundColor: isDarkMode ? "#262626" : "#D9D9D9",
-							borderRadius: "50px",
-							height: "70px",
-							width: "70px",
-						}}
-					>
-						<DiscordLogo size={40} color={isDarkMode ? "#9FB2B2" : "#728181"} />
-					</IconButton>
+						<IconButton
+							p={2}
+							sx={{
+								backgroundColor: isDarkMode ? "#262626" : "#D9D9D9",
+								borderRadius: "50px",
+								height: { lg: "70px", md: "65px", sm: "60px", xs: "55px" },
+								width: { lg: "70px", md: "65px", sm: "60px", xs: "55px" },
+							}}
+						>
+							<LinkedinLogo
+								size={{ lg: 40, md: 30, sm: 20, xs: 10 }}
+								color={isDarkMode ? "#9FB2B2" : "#728181"}
+							/>
+						</IconButton>
+						<IconButton
+							p={2}
+							sx={{
+								backgroundColor: isDarkMode ? "#262626" : "#D9D9D9",
+								borderRadius: "50px",
+								height: { lg: "70px", md: "65px", sm: "60px", xs: "55px" },
+								width: { lg: "70px", md: "65px", sm: "60px", xs: "55px" },
+							}}
+						>
+							<YoutubeLogo
+								size={{ lg: 40, md: 30, sm: 20, xs: 10 }}
+								color={isDarkMode ? "#9FB2B2" : "#728181"}
+							/>
+						</IconButton>
+						<IconButton
+							p={2}
+							sx={{
+								backgroundColor: isDarkMode ? "#262626" : "#D9D9D9",
+								borderRadius: "50px",
+								height: { lg: "70px", md: "65px", sm: "60px", xs: "55px" },
+								width: { lg: "70px", md: "65px", sm: "60px", xs: "55px" },
+							}}
+						>
+							<DiscordLogo
+								size={{ lg: 40, md: 30, sm: 20, xs: 10 }}
+								color={isDarkMode ? "#9FB2B2" : "#728181"}
+							/>
+						</IconButton>
+					</Stack>
 				</Stack>
 			</Stack>
 			<Stack

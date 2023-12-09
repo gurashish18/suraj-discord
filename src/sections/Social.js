@@ -18,7 +18,7 @@ const Social = () => {
 		<Stack
 			display={"flex"}
 			flexDirection={{ lg: "row", md: "column", sm: "column", xs: "column" }}
-			height={"880px"}
+			height={{ lg: "880px", md: "980px", sm: "1080px", xs: "1180px" }}
 			p={2}
 			gap={2}
 			sx={{ backgroundColor: isDarkMode ? "#000000" : "#FFFFFF" }}
@@ -58,7 +58,6 @@ const Social = () => {
 							style={{
 								fontSize: { lg: "80px", md: "70px" },
 								fontWeight: 700,
-								lineHeight: "101.2px",
 							}}
 						>
 							GradYard
@@ -111,7 +110,7 @@ const Social = () => {
 			<Stack
 				flex={{ lg: 0.3, md: 0.3, sm: 0.3, xs: 0.3 }}
 				display={"flex"}
-				flexDirection={{ lg: "column", md: "row", sm: "row", xs: "row" }}
+				flexDirection={{ lg: "column", md: "row", sm: "column", xs: "column" }}
 				height={"100%"}
 				width={"100%"}
 				gap={4}

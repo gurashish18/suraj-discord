@@ -21,9 +21,14 @@ const NewsLetter = () => {
 				<Stack>
 					<Typography
 						sx={{
-							fontSize: "60px",
+							fontSize: { lg: "60px", md: "50px", sm: "40px", xs: "30px" },
 							fontWeight: 600,
-							lineHeight: "75.9px",
+							lineHeight: {
+								lg: "75.9px",
+								md: "65.9px",
+								sm: "55.9px",
+								xs: "45.9px",
+							},
 							color: isDarkMode ? "#9FB2B2" : "#728181",
 							textAlign: "center",
 						}}
@@ -33,7 +38,7 @@ const NewsLetter = () => {
 				</Stack>
 				<Stack
 					display={"flex"}
-					flexDirection={"row"}
+					flexDirection={{ lg: "row", md: "row", sm: "column", xs: "column" }}
 					alignItems={"center"}
 					justifyContent={"center"}
 					gap={4}

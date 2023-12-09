@@ -20,7 +20,7 @@ const Header = () => {
 			<Typography
 				sx={{
 					fontWeight: 600,
-					fontSize: "36px",
+					fontSize: { lg: "36px", md: "32px", sm: "28px", xs: "24px" },
 					color: isDarkMode ? "#ffffff" : "#0D0D0D",
 					lineHeight: "45.54px",
 				}}
