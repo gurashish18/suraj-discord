@@ -5,7 +5,7 @@ import React from "react";
 import Button from "./Button";
 import { useSelector } from "react-redux";
 
-const Article = () => {
+const Article = ({ title, description }) => {
 	const isDarkMode = useSelector((state) => state.isDarkMode.darkMode);
 	return (
 		<Stack height={"100%"} width={"100%"}>
@@ -30,7 +30,7 @@ const Article = () => {
 						color: isDarkMode ? "#9FB2B2" : "#728181",
 					}}
 				>
-					Article Name
+					{title}
 				</Typography>
 				<Typography
 					sx={{
@@ -46,9 +46,7 @@ const Article = () => {
 						marginBottom: "20px",
 					}}
 				>
-					Lorem Ipsum is simply dummy text of the printing and typesetting
-					industry. Lorem Ipsum has been the industry's standard dummy text ever
-					since the 1500s
+					{description}
 				</Typography>
 				<Button text={"Contact Me"} />
 			</Stack>

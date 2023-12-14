@@ -5,6 +5,7 @@ import { YoutubeLogo } from "@phosphor-icons/react/dist/ssr";
 import React from "react";
 import Button from "../components/Button";
 import { useSelector } from "react-redux";
+import Suraj2 from "../assets/suraj2.jpeg";
 
 const Youtube = () => {
 	const isDarkMode = useSelector((state) => state.isDarkMode.darkMode);
@@ -43,7 +44,7 @@ const Youtube = () => {
 						color: isDarkMode ? "#9FB2B2" : "#728181",
 					}}
 				>
-					I was born to develop stuff and tell stories!!!
+					Here I am at Google Developers Student's Clubs Graduation.
 				</Typography>
 			</Stack>
 			<Stack
@@ -55,6 +56,9 @@ const Youtube = () => {
 				sx={{
 					backgroundColor: isDarkMode ? "#171717" : "#D7D7D7",
 					borderRadius: "25px",
+					backgroundImage: `url(${Suraj2})`,
+					backgroundSize: "cover",
+					backgroundPosition: "center",
 				}}
 				p={4}
 			>

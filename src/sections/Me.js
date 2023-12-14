@@ -9,6 +9,7 @@ import {
 import React from "react";
 import Button from "../components/Button";
 import { useSelector } from "react-redux";
+import Suraj from "../assets/suraj.jpeg";
 
 const Me = () => {
 	const isDarkMode = useSelector((state) => state.isDarkMode.darkMode);
@@ -34,7 +35,7 @@ const Me = () => {
 				}}
 				p={4}
 			>
-				<Stack>
+				<Stack maxWidth={{ lg: "80%", md: "90%", sm: "100%", xs: "100%" }}>
 					<Typography
 						sx={{
 							fontSize: { lg: "60px", md: "50px", sm: "40px", xs: "30px" },
@@ -46,10 +47,11 @@ const Me = () => {
 								xs: "45.9px",
 							},
 							color: isDarkMode ? "#9FB2B2" : "#728181",
+							textAlign: "justify",
 						}}
 					>
-						Lorem Ipsum is simply <br /> dummy text of the printing <br />
-						and typesetting industry.
+						Hi, I am Suraj, I create content on Internet related to research and
+						tech.
 					</Typography>
 					<Typography
 						marginTop={"20px"}
@@ -63,11 +65,15 @@ const Me = () => {
 								xs: "22.89px",
 							},
 							color: isDarkMode ? "#5D5D5C" : "#5D5D5C",
+							textAlign: "justify",
 						}}
 					>
-						Lorem Ipsum is simply dummy text of the printing and <br />{" "}
-						typesetting industry. Lorem Ipsum has been the industry's <br />{" "}
-						standard dummy text ever since the 1500s
+						Born in the bustling streets of India and currently living
+						Montreal(Canada), my story echoes the colors of diversity and the
+						rhythm of ambition. I am a graduated student of computer science at
+						McGill University. This website is my digital canvase where i weave
+						together stories of my life, research endeavours, and of course,
+						some "khayali pulao"
 					</Typography>
 				</Stack>
 				<Stack
@@ -138,7 +144,13 @@ const Me = () => {
 					backgroundColor: isDarkMode ? "#171717" : "#D7D7D7",
 					borderRadius: "25px",
 				}}
-			></Stack>
+			>
+				<img
+					src={Suraj}
+					style={{ height: "100%", width: "100%", borderRadius: "25px" }}
+					alt="Suraj picture"
+				/>
+			</Stack>
 		</Stack>
 	);
 };

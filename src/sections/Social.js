@@ -56,7 +56,7 @@ const Social = () => {
 						We are building <br />
 						<span
 							style={{
-								fontSize: { lg: "80px", md: "70px" },
+								fontSize: { lg: "80px", md: "70px", sm: "60px", xs: "50px" },
 								fontWeight: 700,
 							}}
 						>
@@ -92,10 +92,10 @@ const Social = () => {
 						color: isDarkMode ? "#5D5D5C" : "#5D5D5C",
 					}}
 				>
-					Lorem Ipsum is simply dummy text of the printing and typesetting
-					industry. Lorem Ipsum has been the industry's standard dummy text ever
-					since the 1500s, when an unknown printer took a galley of type and
-					scrambled it to make a type specimen book.
+					a community dedicated to helping students seize better opportunities
+					and providing them with insightful guidance. Our community is a hub
+					for like-minded students who share a passion for thinking big. Focused
+					on abroad studies, we believe in the impact of proper guidance
 				</Typography>
 				<Stack
 					marginTop={"20px"}

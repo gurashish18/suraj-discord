@@ -66,8 +66,8 @@ const Interest = () => {
 					>
 						I believe in{" "}
 					</span>
-					Lorem Ipsum is simply dummy text of the printing and typesetting
-					industry.
+					Dream big, work hard, and believe in yourself. You're the hero of your
+					own story.
 				</Typography>
 				<IconButton
 					p={2}
@@ -118,8 +118,8 @@ const Interest = () => {
 					>
 						PS.
 					</span>
-					<br /> I am really interested in discussing books, movies, philosophy
-					and pets so if you like any one of those, we'll be good to go.
+					<br /> I'd love to talk about working together, creating startups, and
+					discussing tech stuff. If you're interested too, let me know!
 				</Typography>
 			</Stack>
 		</Stack>
