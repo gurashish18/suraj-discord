@@ -2,6 +2,7 @@
 
 import React from "react";
 import Articles from "../sections/Articles";
+import Developer from "../sections/Developer";
 import Interest from "../sections/Interest";
 import Join from "../sections/Join";
 import Me from "../sections/Me";
@@ -21,6 +22,7 @@ const Main = () => {
 			<Articles />
 			<NewsLetter />
 			<Join />
+			<Developer />
 		</>
 	);
 };
